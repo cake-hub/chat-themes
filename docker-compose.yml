@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cake_chat:
+    container_name: chat-themes
+    env_file:
+      - .env
+    image: node:10
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports: ['2022:2022']
+    expose: ['2022']
+    volumes:
+        - ./Container:/var/www/html
+        - ./Container/.npm/_logs/:/root/.npm/_logs/
+    tty: true

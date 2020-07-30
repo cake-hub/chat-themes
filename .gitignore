@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# generated files
+# Container/docs/_assets
+# Container/dist
+
+# dotenv environment variables file
+.env
+
+# OS, IDE
+.idea
+.DS_Store

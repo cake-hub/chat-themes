@@ -1,0 +1,12 @@
+version: 1.0.0-beta.1
+product: Chat
+productIcon: chatbot
+section: Develop
+sectionIcon: code
+build: cd ../ && npm install && npm run build
+develop: cd ../ && npm run dev
+variables:
+  npmPackageName: "@cake-hub/chat-themes"
+  repositoryUrl: https://github.com/cake-hub/chat-themes
+  npmPackageUrl: https://www.npmjs.com/package/@cake-hub/chat-themes
+  # npmRegistryUrl: https://registry.npmjs.org/

@@ -1,0 +1,141 @@
+$chat-widget-card-min-width:                    calculateRem(200px) !default;
+$chat-widget-card-max-width:                    calculateRem(400px) !default;
+$chat-widget-vertical-space-between-components: 1rem !default;
+
+$chat-widget-max-width:     calculateRem(360px) !default;
+$chat-widget-height:        calculateRem(640px) !default;
+$chat-widget-border-radius: $border-radius !default;
+$chat-widget-box-shadow:    $box-shadow !default;
+
+$chat-widget-bg-color:        $body-bg !default;
+$chat-widget-color:           $body-color !default;
+
+$chat-widget-bright:          $white !default;
+
+
+// Icons
+$chat-widget-icon-right-link-color:       svg-load($navigation-icon-path + "arrow-right.svg", fill=$link-color) !default;
+$chat-widget-icon-right-link-hover-color: svg-load($navigation-icon-path + "arrow-right.svg", fill=$link-hover-color) !default;
+$chat-widget-icon-left-bright:            svg-load($navigation-icon-path + "arrow-left.svg", fill=$chat-widget-bright) !default;
+$chat-widget-icon-right-bright:           svg-load($navigation-icon-path + "arrow-right.svg", fill=$chat-widget-bright) !default;
+
+$chat-widget-icon-bg-right:               $chat-widget-icon-right-link-color no-repeat center center !default;
+$chat-widget-icon-bg-left-bright:         $chat-widget-icon-left-bright no-repeat center center !default;
+$chat-widget-icon-bg-right-bright:        $chat-widget-icon-right-bright no-repeat center center !default;
+
+
+$chat-widget-header-bg-color:         $primary !default;
+$chat-widget-header-color:            $white !default;
+$chat-widget-header-height:           ($spacer * 5) !default;
+$chat-widget-header-padding:          $spacer ($spacer * 2) !default;
+$chat-widget-header-font-weight:      $font-weight-bold !default;
+$chat-widget-header-font-line-height: 1.2 !default;
+$chat-widget-header-close-color:      $chat-widget-header-color !default;
+$chat-widget-header-close-bg-color:   $chat-widget-header-bg-color !default;
+$chat-widget-header-close-icon-size:  ($spacer * 2) !default;
+$chat-widget-header-close-icon:       svg-load($navigation-icon-path + "cross.svg", fill=$chat-widget-header-close-color) !default;
+$chat-widget-header-close-bg-size:    $chat-widget-header-close-icon-size $chat-widget-header-close-icon-size !default;
+$chat-widget-header-close-padding-x:  0 !default;
+$chat-widget-header-close-background: $chat-widget-header-close-icon no-repeat right $chat-widget-header-close-padding-x center / $chat-widget-header-close-bg-size $chat-widget-header-close-bg-color !default;
+$chat-widget-header-close-margin:     0 0 0 $spacer !default;
+$chat-widget-header-logo-bg-color:    $primary !default;
+$chat-widget-header-logo-size:        ($spacer * 3) !default;
+$chat-widget-header-logo-border:      1px solid $white !default;
+$chat-widget-header-logo-margin:      $spacer !default;
+
+$chat-widget-content-padding-x:   $spacer !default;
+
+$chat-widget-footer-height:                   ($spacer * 7) !default;
+$chat-widget-footer-btn-send-size:            ($spacer * 7) !default;
+$chat-widget-footer-user-input-padding:       ($spacer * 2) $chat-widget-footer-btn-send-size ($spacer * 2) ($spacer * 2) !default;
+$chat-widget-footer-user-input-border-top:    1px solid cake-color("gray", "light") !default;
+$chat-widget-footer-icon-size:                ($spacer * 3) !default;
+$chat-widget-footer-icon-color:               cake-color("gray", "darker") !default;
+$chat-widget-footer-icon-color-hover:         cake-color("primary") !default;
+$chat-widget-footer-icon-color-disabled:      cake-color("gray", "light") !default;
+
+$chat-widget-transmitter-margin:  $spacer !default;
+$chat-widget-receiver-margin:     ($spacer * 5) !default;
+
+$chat-widget-msg-alert-bottom:                ($chat-widget-footer-height + $spacer) !default;
+$chat-widget-msg-alert-max-width:             calc(100% - #{$chat-widget-transmitter-margin}) !default;
+$chat-widget-msg-alert-padding:               .5rem !default;
+$chat-widget-msg-alert-border-radius:         $border-radius-lg !default;
+$chat-widget-msg-alert-font-size:             calculateRem(16px) !default;
+$chat-widget-msg-alert-color:                 cake-color($primary, darker) !default;
+$chat-widget-msg-alert-bg-color:              cake-color($primary, background) !default;
+$chat-widget-msg-alert-border-color:          cake-color($primary) !default;
+$chat-widget-msg-alert-box-shadow:            $box-shadow !default;
+
+$chat-widget-slider-bg-color:               transparent !default;
+$chat-widget-slider-color:                  inherit !default;
+$chat-widget-slider-font-size:              $font-size-base !default;
+$chat-widget-slider-box-shadow:             $box-shadow !default;
+$chat-widget-slider-content-padding:        $spacer $spacer !default;
+$chat-widget-slider-img-ratio-height:       75% !default;
+$chat-widget-slider-gutter:                 $spacer !default;
+$chat-widget-slider-section-margin:         0 $chat-widget-slider-gutter .25rem 0 !default; // .25rem for shadow offset
+$chat-widget-slider-section-bg-color:       $white !default;
+$chat-widget-slider-section-border-radius:  $border-radius !default;
+$chat-widget-slider-title-font-size:        $theme-slider-title-font-size !default;
+$chat-widget-slider-title-weight:           $theme-slider-title-font-weight !default;
+$chat-widget-slider-subtitle-font-size:     $font-size-sm !default;
+$chat-widget-slider-subtitle-weight:        $theme-slider-subhead-font-weight !default;
+$chat-widget-slider-subtitle-margin-top:    $theme-slider-title-margin-bottom !default;
+$chat-widget-slider-description-margin-top: $spacer !default;
+$chat-widget-slider-btn-height:             ($spacer * 8) !default;
+$chat-widget-slider-btn-widht:              ($spacer * 4) !default;
+$chat-widget-slider-btn-bg-color:           $primary !default;
+$chat-widget-slider-btn-border-radius:      $border-radius !default;
+$chat-widget-slider-single-max-width:       calculateRem(254px) !default;
+$chat-widget-slider-single-padding:         ($spacer * 2) !default;
+$chat-widget-slider-single-title-font-size: $font-size-lg !default;
+
+$chat-widget-msg-padding:                   ($spacer * 2) !default;
+$chat-widget-msg-border-radius:             calculateRem(10px) !default;
+$chat-widget-msg-box-shadow:                $box-shadow !default;
+$chat-widget-msg-incoming-bg-color:         $white !default;
+$chat-widget-msg-incoming-color:            $body-color !default;
+$chat-widget-msg-outgoing-bg-color:         $primary !default;
+$chat-widget-msg-outgoing-color:            $white !default;
+
+$chat-widget-image-border-radius:           $chat-widget-border-radius !default;
+$chat-widget-image-container-box-shadow:    $chat-widget-box-shadow !default;
+$chat-widget-image-container-margin:        $chat-widget-vertical-space-between-components $spacer 0 $spacer !default;
+$chat-widget-image-container-width:         calc(100% - #{$spacer * 2}) !default;
+$chat-widget-image-ratio-height:            75% !default;
+
+$chat-widget-chip-grid-margin:              $spacer !default;
+
+$chat-widget-btn-list-container-bg-color:       $white !default;
+$chat-widget-btn-list-container-shadow:         $box-shadow !default;
+$chat-widget-btn-list-container-border-radius:  $border-radius !default;
+$chat-widget-btn-list-container-color:          inherit !default;
+$chat-widget-btn-list-header-padding:           ($spacer * 2) !default;
+$chat-widget-btn-list-icon-size:                ($spacer * 2) !default;
+
+$chat-widget-btn-list-margin:                   $chat-widget-vertical-space-between-components $chat-widget-receiver-margin 0 $chat-widget-transmitter-margin !default;
+
+$chat-widget-typing-bg-default:         cake-color("gray", "darker") !default;
+$chat-widget-typing-bg-animated:        cake-color("gray", "light") !default;
+$chat-widget-typing-dimension:          .75rem !default;
+$chat-widget-typing-animation-up-down:  .25rem !default;
+$chat-widget-typing-animation-scale:    .9 !default;
+
+
+// stylelint-disable scss/dollar-variable-default
+// List group
+
+$list-group-color:                  null;
+$list-group-bg:                     $chat-widget-btn-list-container-bg-color;
+$list-group-border-color:           cake-color("gray", "lighter");
+$list-group-border-width:           $border-width;
+$list-group-border-radius:          inherit;
+
+$list-group-hover-bg:               $chat-widget-btn-list-container-bg-color;
+
+$list-group-action-color:           $link-color;
+$list-group-action-hover-color:     $link-hover-color;
+
+$list-group-action-active-color:    $link-color;
+$list-group-action-active-bg:       $chat-widget-btn-list-container-bg-color;

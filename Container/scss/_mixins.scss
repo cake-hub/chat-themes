@@ -1,0 +1,62 @@
+// Hide scrollbars
+// ---------------
+
+@mixin chatbot-hide-scrollbars {
+  overflow: auto;
+  scrollbar-width: none; // bugfix: Firefox 64+
+  -ms-overflow-style: none; // bugfix - oldBrowser: IE 10+
+
+  &::-webkit-scrollbar {
+    // WebKit
+    display: none;
+  }
+}
+
+
+// Display content maintained in Markdown properly
+// -----------------------------------------------
+
+@mixin markdown-content {
+  p {
+    margin-top: .75em;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding-inline-start: 2em;
+  }
+}
+
+// ============================================================
+//  ButtonList.svelte
+// ============================================================
+
+@mixin chatbot-list-group-item {
+  // solution like https://getbootstrap.com/docs/4.5/components/list-group/#with-badges
+  .button {
+    @extend .list-group-item;
+    @extend .list-group-item-action;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+
+      .arrow {
+        background-image: $chat-widget-icon-right-link-hover-color;
+      }
+    }
+  }
+  .arrow {
+    flex-shrink: 0;
+    margin-left: .5rem;
+  }
+}

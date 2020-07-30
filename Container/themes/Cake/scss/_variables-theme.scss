@@ -1,0 +1,17 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// stylelint-disable value-keyword-case, scss/dollar-variable-default
+
+// Adjust the icon-paths (the webpack.config.js is the root folder)
+// needed for base64 encoded icons in css
+$expression-icon-path:      "./node_modules/@cake-hub/web-css_framework/assets/icons/expression/";
+$interaction-icon-path:     "./node_modules/@cake-hub/web-css_framework/assets/icons/interaction/";
+$navigation-icon-path:      "./node_modules/@cake-hub/web-css_framework/assets/icons/navigation/";
+$smiley-icon-path:          "./node_modules/@cake-hub/web-css_framework/assets/icons/smiley/";
+$scss-icon-path:            "./node_modules/@cake-hub/web-css_framework/assets/icons/_scssOnly/";
+
+$border-radius-lg:          .625rem;
+
+$chat-widget-header-logo-bg-color:    $white;
