@@ -18,19 +18,22 @@
 @import "../../../scss/variables";
 @import "~@cake-hub/web-css_framework/scss/mixins";
 @import "../../../scss/mixins";
-@import "~@cake-hub/web-css_framework/scss/root";
-@import "~@cake-hub/web-css_framework/scss/reboot";
-@import "~@cake-hub/web-css_framework/scss/typography-font-face";
-@import "~@cake-hub/web-css_framework/scss/typography";
-@import "~@cake-hub/web-css_framework/scss/image";
-@import "~@cake-hub/web-css_framework/scss/form";
-@import "~@cake-hub/web-css_framework/scss/button";
-@import "~@cake-hub/web-css_framework/scss/input-group";
-@import "~@cake-hub/web-css_framework/scss/custom-form";
-@import "~@cake-hub/web-css_framework/scss/badge";
-@import "~@cake-hub/web-css_framework/scss/alert";
-@import "~@cake-hub/web-css_framework/scss/list-group";
-@import "~@cake-hub/web-css_framework/scss/utilities";
-@import "~@cake-hub/web-css_framework/scss/icon";
 
+@import "~@cake-hub/web-css_framework/scss/typography-font-face";
+
+#sit-chat-widget {
+  @import "~@cake-hub/web-css_framework/scss/root";
+  @import "~@cake-hub/web-css_framework/scss/reboot";
+  @import "~@cake-hub/web-css_framework/scss/typography";
+  @import "~@cake-hub/web-css_framework/scss/form";
+  @import "~@cake-hub/web-css_framework/scss/button";
+  @import "~@cake-hub/web-css_framework/scss/input-group";
+  @import "~@cake-hub/web-css_framework/scss/badge";
+  @import "~@cake-hub/web-css_framework/scss/alert";
+  @import "~@cake-hub/web-css_framework/scss/list-group";
+  @import "~@cake-hub/web-css_framework/scss/utilities/text";
+  @import "~@cake-hub/web-css_framework/scss/icon";
+}
+
+@import "../../../scss/chat-reboot.scss";
 @import "../../../scss/chat";

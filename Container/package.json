@@ -1,12 +1,12 @@
 {
   "name": "@cake-hub/chat-themes",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "Chatbot for the Schwarz Group",
   "repository": {
     "type": "git"
   },
   "publishConfig": {
-    "registry": "https://pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "start": "npm install && npm run build",
@@ -20,10 +20,10 @@
     "server": "http-server ./docs -p 2022"
   },
   "dependencies": {
-    "@cake-hub/web-css_framework": "^4.0.0",
-    "@scw/sit-chat-widget": "^1.0.0"
+    "@cake-hub/web-css_framework": "^4.1.0"
   },
   "devDependencies": {
+    "@scw/sit-chat-widget": "^1.0.0",
     "autoprefixer": "^9.7.4",
     "css-loader": "^2.1.0",
     "filemanager-webpack-plugin": "^2.0.5",

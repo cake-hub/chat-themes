@@ -43,11 +43,14 @@
   box-sizing: border-box;
   max-width: $chat-widget-max-width;
   height: $chat-widget-height;
-  margin: 0 auto;
   color: $chat-widget-color;
   @include border-top-radius($chat-widget-border-radius);
   background-color: $chat-widget-bg-color;
   box-shadow: $chat-widget-box-shadow;
+
+  @media (min-height: $chat-widget-max-height) {
+    max-height: $chat-widget-max-height;
+  }
 
   // header
   > header {
@@ -128,6 +131,7 @@
   // footer
   > footer {
     @extend .input-group;
+    flex-shrink: 0; // bugfix - oldBrowser: IE11
     height: $chat-widget-footer-height;
     padding: 0;
     background-color: $chat-widget-bg-color;

@@ -4,7 +4,15 @@
 
 ## Quick start
 
-Install CAKE in your Node.js powered apps with [the npm package]({{ variables.npmPackageUrl }}):
+## Install chatbot first
+
+First at all follow the installation instruction of chatbot. You are not in touch with the chatbot team? No problem! Contact us and we can help you. Once you have successfully implemented the chatbot, come back and install one of our ready-made themes for different companies.
+
+## Install theme
+
+It's very simple. Just install our NPM package and replace the default styles with the company-specific ones from our package.
+
+Install CAKE chat themes in your Node.js powered apps with [the npm package]({{ variables.npmPackageUrl }}):
 
 ```console
 npm install --save {{ variables.npmPackageName }}
@@ -34,15 +42,17 @@ dist/
 Please load the theme file **after** the general `chat-widget.min.css` file. Here is a simple example:
 
 ```html
-<!-- Independent overall styling -->
+<!-- Independent overall styling from chatbot -->
 <link rel="stylesheet" href="./css/chat-widget.min.css" />
-<!-- Theme -->
+<!-- Theme from our chat-themes package -->
 <link rel="stylesheet" href="./[COMPANY NAME]/css/chat-cake.min.css" />
 ```
 
 ### JavaScript
 
-To support also older browsers we use some polyfills.
+To **support older browsers** as well, we use some polyfills and the legacy JavaScript from the documentation of the chatbot. If you don't have to support Internet Explorer 11, you can also use the default `chat-widget.min.js` version and leave out the polyfills.
+
+### Polyfills for larger browser support
 
 Polyfills IE need for Promise, fetch API, ...
 
@@ -56,51 +66,36 @@ Polyfills IE need for Promise, fetch API, ...
 <script src="runtime.js"></script>
 ```
 
-And the legacy JavaScript version of chatbot.
+### Legacy version of chatbot
+
+And the legacy JavaScript version of chatbot instead of the default `chat-widget.min.js`.
 
 ```html
 <script src="./js/chat-widget-legacy.min.js"></script>
 ```
 
 
-## Chatbot example configuration
+### Example configuration
 
 You have to set some JavaScript properties to get the theme up and run.
-
 Here is an extract from the official documentation. Only the properties relevant to the theme are shown here.
 
-```js
-new ChatWidget({
-    props: {
-        settings: {
-            cardScrollDistance: 200,
-            newMessages: '↓ Neue Nachrichten',
-            locale: 'de-DE',
-            header: `
-                <div style="display: flex; align-items: center;">
-                    <img
-                        src="../../../_assets/themes/Lidl/images/logo.svg"
-                        alt="Logo"
-                        class="bot-avatar" />
-                    Sir Chatalot the second
-                </div>
-                <a class="close" onclick="alert('Implement click handler to close widget!')" />`,
-            iconSend: '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M55.06 2.27L3.66 27.02c-1.71.82-1.42 3.35.44 3.76l20.62 4.51 4.51 20.62c.41 1.86 2.93 2.15 3.76.44L57.73 4.94c.82-1.71-.96-3.49-2.67-2.67zM7.57 28.46L49.7 8.18l-24.2 24.2-17.93-3.92zm23.97 23.97L27.62 34.5l24.2-24.2-20.28 42.13z"/><path d="M20.29 38.29c-.2-.2-.51-.2-.71 0L5.29 52.59c-.2.2-.2.51 0 .71l1.41 1.41c.2.2.51.2.71 0l12.88-12.88c.98-.98.98-2.56 0-3.54zM9.01 42.77l2.47-2.47c.98-.98.98-2.56 0-3.54-.2-.2-.51-.2-.71 0l-3.89 3.89c-.2.2-.2.51 0 .71l1.41 1.41c.21.2.52.2.72 0zM22.27 45.95l-7.34 7.34c-.2.2-.2.51 0 .71l1.41 1.41c.2.2.51.2.71 0l5.92-5.92c.98-.98.98-2.56 0-3.54a.501.501 0 00-.7 0z"/></svg>'
+<ContentRack
+    fields='
+        "Lidl":{
+            "src": "examples/configurations/Lidl.js",
+            "type": "content"
         },
-    },
-});
-```
+        "Schwarz":{
+            "src": "examples/configurations/Schwarz.js",
+            "type": "content"
+        }
+    '
+ />
 
-You find the `iconSend` SVG for your company in the `icons` folder. For example: `paper-plane.svg`.
+## Example
 
-```text
-dist/
-└── [COMPANY NAME]/
-    ├── [...]
-    ├── icons/
-    │   └── paper-plane.svg
-    └── [...]
-```
+By using your configuration a chatbot looking like the example below should show up in your project:
 
 <ContentRack
     fields='
@@ -111,4 +106,4 @@ dist/
     '
  />
 
-![ChatDefault](examples/chatDefault.html)
+<Iframe src="examples/chatDefault.html" style="min-height: 45rem;" title="Chat theme" alt="chatDefault" />

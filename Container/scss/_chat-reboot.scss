@@ -1,0 +1,14 @@
+#sit-chat-widget {
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba($black, 0);
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: left;
+  background-color: $body-bg;
+}

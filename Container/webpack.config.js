@@ -11,19 +11,6 @@ const packageJson = require ("./package.json");
 const _moduleAliases = packageJson._moduleAliases;
 let absolutedAliases = {};
 
-const uniqueFileNames = (pathArray , ext) => {
-    let usedNames = [];
-    let iconArray = [];
-    for (let iconPath of pathArray.reverse ()) {
-        const iconName = path.basename (iconPath, ext);
-        if (!usedNames.includes (iconName)) {
-            usedNames.push (iconName);
-            iconArray.push (iconPath);
-        }
-    }
-    return iconArray;
-};
-
 for (let alias in _moduleAliases) {
     if(_moduleAliases.hasOwnProperty(alias)){
         absolutedAliases[alias] = path.resolve(__dirname, _moduleAliases[alias])
@@ -127,8 +114,6 @@ const plugins = [
             copy: [
                 // copy logo and fonts
                 ...configuration.Themes.map (theme => ({ source: './node_modules/@cake-hub/web-css_framework/themes/' + theme + '/assets/!(icons)**/*', destination: path.resolve(__dirname, './dist/' + theme) })).values (),
-                // Icons. For now just paper-plane.svg
-                ...configuration.Themes.map (theme => ({ source: './themes/' + theme + '/assets/**/*', destination: path.resolve(__dirname, './dist/' + theme) })).values (),
                 // copy runtime.js
                 ...configuration.Themes.map (theme => ({ source: './js/', destination: path.resolve(__dirname, './docs/_assets/js/') })).values (),
 

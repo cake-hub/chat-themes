@@ -3,7 +3,8 @@ $chat-widget-card-max-width:                    calculateRem(400px) !default;
 $chat-widget-vertical-space-between-components: 1rem !default;
 
 $chat-widget-max-width:     calculateRem(360px) !default;
-$chat-widget-height:        calculateRem(640px) !default;
+$chat-widget-height:        90vh !default;
+$chat-widget-max-height:    calculateRem(640px) !default;
 $chat-widget-border-radius: $border-radius !default;
 $chat-widget-box-shadow:    $box-shadow !default;
 
